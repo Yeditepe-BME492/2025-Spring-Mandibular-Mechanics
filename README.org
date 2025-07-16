@@ -1,5 +1,6 @@
 #+STARTUP: overview
-#+TITLE: es117 ajanda
+#+TITLE: Project File
+#+SUBTITLE: BME 492 - 2025 Spring - Mandibular Mechanics
 #+CREATOR: Fethi Okyar
 #+LANGUAGE: en; tr
 #+OPTIONS: num:nil
@@ -10,47 +11,16 @@
 
 [[file:folder-1/README.org][Go to target file]]
 
-* yeni ders faaliyet/bileşenleri
-1. [X] github classroom entegrasyonu
-2. [X] matlab bileşeninin yanısıra python eklenmesi
-3. [ ] yulearn/github entegrasyonu için DT bilişim şirketiyle görüşme
-   [[https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/register-a-learning-management-system-with-github-classroom#configuring-moodle-for-github-classroom][register-a-learning-management-system-with-github-classroom]]
-4. [ ] github co-pilot entegrasyonu
-5. [ ] vscode editörünün entegrasyonu
-6. [ ] coursera entegrasyonu
-* öğretim kadrosu
-** Ufuk Tan Baler
-** Mustafa Erkam Özateş (iptal)
-** pilot şubeler için iyileştirme ögeleri
-* syllabus iyileştirme
-| Week | Topics                                                   | change                                     | lab                                           |
-|------+----------------------------------------------------------+--------------------------------------------+-----------------------------------------------|
-|    1 | Introduction to Computers and Software and MATLAB®       | course conduct                             | no lab                                        |
-|    2 | Programming Languages: Matlab, Python                    | interacting with a computer                |                                               |
-|    3 | Basic Calculations & Variables, Lists                    | interacting with an operating system       | terminal crash course w/openAI                |
-|    4 | Built-in Functions and Libraries                         | programming environments: octave, python   | github crash course                           |
-|    5 | Character Arrays and Display Functions                   | data types, operator precedence, registers | basic calculations                            |
-|    6 | Script Files & User Defined Functions                    | available functions, function libraries    | demo of a small library                       |
-|    7 | 1ST MIDTERM                                              | character type, basic shell input/output   | user interaction demo, reading data from file |
-|    8 | Logical Operators, Operations & The ‘find’ Command       | scripting snippets, storing in files       | a script that calculates the GPA              |
-|    9 | The if – else Statement                                  | list data type in octave vs. python        | number lists for vector-matrix ops            |
-|   10 | For Loops                                                | logicals, operators, using 'find'          | debugging algorithms                          |
-|   11 | While Loops                                              | the if-else conditional                    | bisection method (rootfinding)                |
-|   12 | 2ND MIDTERM                                              | constructing loops for repeated tasks      | generating data series (for plotting)         |
-|   13 | Simple 2D Plotting & Multiple Plots in one Figure Window | loops terminating with a while conditional | converging algorithms (rootfinding)           |
-|   14 | File Operations                                          |                                            |                                               |
-
-** github classroom integration
+* Fundamentals
+** github
 1. https://github.com/community/Global-Campus-Teachers/discussions/6 Introduction to GitHub Classroom duyurusu
 2. https://skills.github.com/ Learning github featuring beginner to advanced courses
-3. https://github.com/community Github community pages, Global-campus-teachers repo is under this page
-4. https://cli.github.com/ Github CLI, download for your OS
-5. https://github.com/community/Global-Campus-Teachers/discussions/203 discussion thread for Github CLI
+3. https://cli.github.com/ Github CLI, download for your OS
 6. [[https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/connect-a-learning-management-system-course-to-a-classroom][connect-a-learning-management-system-course-to-a-classroom]]
-- [ ] bu süreç github classroom'da nasıl yönetilir?
-- [ ] ders bir github reposu mudur?
-  Görünüşe göre classroom'da sadece assignment veriliyor. Bir öğrenci assignment'a url'den girdiğinde bir repository açılıyor. Classroom'da genel bir home repository olduğunu görmedim. Belki organizasyon içinde syllabus'la alakalı bir repository açılabilir ve içine README.org vb koyulabilir.
-- [ ] README.org dosyası olacak mı? (dersin syllabusu olacak)
+7. [ ] bu süreç github classroom'da nasıl yönetilir?
+8. [ ] ders bir github reposu mudur?
+   Görünüşe göre classroom'da sadece assignment veriliyor. Bir öğrenci assignment'a url'den girdiğinde bir repository açılıyor. Classroom'da genel bir home repository olduğunu görmedim. Belki organizasyon içinde syllabus'la alakalı bir repository açılabilir ve içine README.org vb koyulabilir.
+9. [ ] README.org dosyası olacak mı? (dersin syllabusu olacak)
 
 ** temel terimler
 |-----------------+--------------------+-------------+-------------+-----------------------|
@@ -74,136 +44,37 @@
 |-----------------+--------------------+-------------+-------------+-----------------------|
 | Dot product     | program            | programming | interpreter |                       |
 
-** detaylı ders planı
+** çalışma takvimi
 *** week 1
-**** lecture: interacting with an operating system
-- objectives:
-  1. diagram of a computer
-  2. layers of an operating system
-  3. the console in windows and linux
-     
-- questions (for AI):
-  1. What are the components of an x86 architecture computer?
-  2. x86 naming?
-  3. What are the functions of each computer component?
-  4. Which kind of information does CPU processes, and how?
-  5. How do RAM, and CPU work together?
-  6. Explain kernel in the simplest way possible.
-  7. What is the function of the assemble layer?
-
-- lecture notes:
-  1. Diagram of a computer
-    Hardware <-> Operating System <-> Applications/Programs
-     * Basic hardware architecture
-       Central Processing Unit
-       Memory
-       Disk
-       Ethernet
-       Disk and ethernet controllers
-       I/O bus
-
-  2. Layers of an operating system
-    https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html
-     1) User space
-	+ applications
-     2) Kernel space
-	+ system call interface
-	+ kernel
-	+ device drivers
-     3) Hardware
-
-     What is kernel?
-     * Kernel
-       + Process management
-       + Memory management
-       + Device communication
-       + System calls
-       + Setting up the filesystem
-
-     * Some key concepts:
-       + Process
-       + Program
-       + Files
-       + Virtual memory
-
-     What is a shell?
-     https://www.gnu.org/software/bash/manual/bash.html#What-is-a-shell_003f
-#+BEGIN_SRC bash
-sleep 5 & echo es117
-#+END_SRC
-     Shell is both a command interpreter and a programming language.
-       
-  3. The console in windows and linux
-     Why do we need a console in our OS?
-     A console, also known as a terminal emulator, uçbirim öykünücüsü, is a window that emulates a computer terminal.
-     
-     CPU understands *machine language*
-     #+BEGIN_SRC
-     0101000010000101110101010101101000
-     0001011101010000001111110000001011
-     ...
-     #+END_SRC
-     * Interpreter
-       It is like a conversation with a computer.
-       reads the code -> parses the code -> interprets!
-       #+BEGIN_SRC python
-       x = 6
-       print(x)
-       y = x * 7
-       print(y)
-       #+END_SRC
-     
-**** lab: terminal crash course w/openAI
-objectives:
-deliverables:
--  To download the latest python3 interpreter go to https://www.anaconda.com/download/.
-
 *** week 2
-**** lecture: programming environments: octave, python
-- lecture notes:
-  1. Programming essentials
-     A language to *spell*, and *construct sentences*
-     Don't worry vocabulary is very small!
-     A story telling skill to convey an idea (PROBLEM) by constructing the story (PROGRAM)
-     The story telling skill persists in every language
-     The learning process of a new language is fairly quick and easy
-     The coherence in writing a program takes TIME!
-     Programming is actually a pleasant and creative process!
-     vocabulary <-> reserved words <-> keywords
-     
-     #+CAPTION: Python Keywords
-     |--------+--------+---------+----------+----------+--------+-------|
-     | False  | None   | True    | and      | as       | assert | async |
-     | await  | break  | class   | continue | def      | del    | elif  |
-     | else   | except | finally | for      | from     | global | if    |
-     | import | in     | is      | lambda   | nonlocal | not    | or    |
-     | pass   | raise  | return  | try      | while    | with   | yield |
-     |--------+--------+---------+----------+----------+--------+-------|
 
-     #+CAPTION: Some of the MATLAB Keywords
-     |----------+--------+----------+----------|
-     | auto     | double | int      | struct   |
-     | break    | else   | long     | switch   |
-     | case     | enum   | register | typedef  |
-     | char     | extern | return   | union    |
-     | const    | float  | short    | unsigned |
-     | continue | for    | signed   | void     |
-     | default  | goto   | sizeof   | volatile |
-     | do       | if     | static   | while    |
-     |----------+--------+----------+----------|
+* Meeting Notes
+** July 16, Restart
+  1. febio ile örnek ve çalışmayan input dosyalarına bakıldı (örnek dosyada bulunan iki parça tek parçaymış gibi modellenmiş, ayrıca birçok serbestlik derecesi gereksiz şekilde sabitlenmiş)
+  2. febio'dan vazgeçme kararı verdim, onun yerine açık kaynak prepomax/calculix çifti denendi.
+  3. model için onshape'e girildi. Bir belge oluşturuldu (mandible_mockup) ve Belsu ile paylaşıldı.
+  4. onshape'de export, prepomax'da import komutları incelendi, birden fazla parça içeren studio'lardan tek parça çekebiliyor (soru: step ve/veya iges dosyalarında birden fazla parça temsili için assembly olması mı gerekir? chatGPT'ye sorulacak).
+  5. prepomax'da assembly contact ayarları ve çalıştırılması üzerinde çalışılacak. parçalar, bağlantılar ve yükleme senaryosu oluşturuldu. kap içerisinde boşluklu geçme çubuğun yukarıdan bir yöne doğru çekilmesi.
+ 
+* Input
+** calculix models
+** CAD models
+** Imaging models
+* Output
+| Week | Topics                                                   | change                                     | lab                                           |
+|------+----------------------------------------------------------+--------------------------------------------+-----------------------------------------------|
+|    1 | Introduction to Computers and Software and MATLAB®       | course conduct                             | no lab                                        |
+|    2 | Programming Languages: Matlab, Python                    | interacting with a computer                |                                               |
+|    3 | Basic Calculations & Variables, Lists                    | interacting with an operating system       | terminal crash course w/openAI                |
+|    4 | Built-in Functions and Libraries                         | programming environments: octave, python   | github crash course                           |
+|    5 | Character Arrays and Display Functions                   | data types, operator precedence, registers | basic calculations                            |
+|    6 | Script Files & User Defined Functions                    | available functions, function libraries    | demo of a small library                       |
+|    7 | 1ST MIDTERM                                              | character type, basic shell input/output   | user interaction demo, reading data from file |
+|    8 | Logical Operators, Operations & The ‘find’ Command       | scripting snippets, storing in files       | a script that calculates the GPA              |
+|    9 | The if – else Statement                                  | list data type in octave vs. python        | number lists for vector-matrix ops            |
+|   10 | For Loops                                                | logicals, operators, using 'find'          | debugging algorithms                          |
+|   11 | While Loops                                              | the if-else conditional                    | bisection method (rootfinding)                |
+|   12 | 2ND MIDTERM                                              | constructing loops for repeated tasks      | generating data series (for plotting)         |
+|   13 | Simple 2D Plotting & Multiple Plots in one Figure Window | loops terminating with a while conditional | converging algorithms (rootfinding)           |
+|   14 | File Operations                                          |                                            |                                               |
 
-**** lab: github crash course
-objectives:
-deliverables:
-
-Some ideas:
-Version control: git, Github
-git, Github crash course
-disassembly of a computer and laptop
-laptop situation for labs
-Check labs
-Request old exams and quizzes
-Attendence in grading?
-Cygwin?
-Git terminal?
-Arithmetic symbols
